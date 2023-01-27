@@ -7,6 +7,7 @@
 	"INCLUDE_DIR" : "C:/Users/hasnaine/Documents/QT Practice/Assignment-4/build-Assignment-4-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/Assignment-4_autogen/include",
 	"INPUTS" : 
 	[
+		"C:/Users/hasnaine/Documents/QT Practice/Assignment-4/Assignment-4/ApiRND.qml",
 		"C:/Users/hasnaine/Documents/QT Practice/Assignment-4/Assignment-4/main.qml"
 	],
 	"LOCK_FILE" : "C:/Users/hasnaine/Documents/QT Practice/Assignment-4/build-Assignment-4-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/CMakeFiles/Assignment-4_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
