@@ -6,7 +6,6 @@ Rectangle {
     height: 400
     property string apiUrl: "https://api.giphy.com/v1/gifs/trending?api_key=TcDy1smE4B7HeCXW7xJuGSfevKMrvpzI&limit=2&rating=g"
 
-
     Component.onCompleted: getData1()
 
     function getData1() {

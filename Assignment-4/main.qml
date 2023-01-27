@@ -8,10 +8,6 @@ Window {
     visible: true
     title: qsTr("Hello World")
 
-    ApiRND {
-
-    }
-
     Rectangle {
         width: 250
         height: 250
