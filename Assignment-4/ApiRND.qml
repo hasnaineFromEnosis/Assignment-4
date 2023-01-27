@@ -20,7 +20,7 @@ Rectangle {
                 console.log("Response: ", response)
 
                 response.forEach(function(gif) {
-                    console.log(gif.images.original.url)
+                    console.log(gif.images.downsized_still.url)
                     console.log(gif.title)
                 })
 

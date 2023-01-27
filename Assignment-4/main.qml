@@ -8,4 +8,20 @@ Window {
     visible: true
     title: qsTr("Hello World")
 
+    ApiRND {
+
+    }
+
+    Rectangle {
+        width: 250
+        height: 250
+        color: "red"
+
+        Image {
+            id: img1
+            anchors.fill: parent
+            source: "https://media2.giphy.com/media/TkK2EkahP1aFM0mrim/giphy-downsized_s.gif?cid=029c8cdcz7050xqk778ms775xgg03tft5f5lgr751zfd0q2t&rid=giphy-downsized_s.gif&ct=g"
+        }
+    }
+
 }
