@@ -2,10 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     id: root
-    width: 200
-    height: 200
     color: "transparent"
-
 
     ListView {
         anchors.fill: parent
@@ -22,8 +19,6 @@ Rectangle {
             Rectangle {
                 anchors.fill: parent
                 anchors.margins: 5
-                radius: 20
-                clip: true
                 color: "transparent"
 
                 CustomImage {
