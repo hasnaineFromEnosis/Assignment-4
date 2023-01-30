@@ -6,5 +6,6 @@
         <file>GiphyModel.qml</file>
         <file>CustomGridView.qml</file>
         <file>CustomListView.qml</file>
+        <file>CustomImage.qml</file>
     </qresource>
 </RCC>

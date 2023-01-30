@@ -13,6 +13,7 @@ Rectangle {
         spacing: 20
 
         delegate: Rectangle {
+            id: topRect
             width: 350
             height: 150
             color: "#8395a7"
@@ -25,11 +26,12 @@ Rectangle {
                 clip: true
                 color: "transparent"
 
-                Image {
+                CustomImage {
                     id: thumnailImage
                     width: 150
                     height: parent.height
-                    source: url
+                    imgsrc: url
+                    bgcolor: topRect.color
                 }
 
                 Rectangle {
