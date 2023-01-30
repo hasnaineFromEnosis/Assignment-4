@@ -6,18 +6,30 @@ Window {
     width: 640
     height: 480
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("Trending Gif")
 
-    Rectangle {
-        width: 250
-        height: 250
-        color: "red"
-
-        Image {
-            id: img1
-            anchors.fill: parent
-            source: "https://media2.giphy.com/media/TkK2EkahP1aFM0mrim/giphy-downsized_s.gif?cid=029c8cdcz7050xqk778ms775xgg03tft5f5lgr751zfd0q2t&rid=giphy-downsized_s.gif&ct=g"
+    FetchData {
+        onFetched: (model) => {
+            console.log(model.count)
         }
     }
 
+
+    Loader {
+        id: gridViewLoader
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.bottom: analogButton.top
+        source: "CustomGridView.qml"
+        active: false
+
+        onLoaded: {
+            gridViewbinder.target = gridViewLoader.item;
+        }
+    }
+
+    Binding {
+        id: gridViewbinder
+    }
 }

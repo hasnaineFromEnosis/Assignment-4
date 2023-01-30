@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>ApiRND.qml</file>
+        <file>FetchData.qml</file>
+        <file>GiphyModel.qml</file>
+        <file>CustomGridView.qml</file>
     </qresource>
 </RCC>

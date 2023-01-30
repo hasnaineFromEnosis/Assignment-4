@@ -610,15 +610,15 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 71,
-			"id" : "Assignment-4_qmlimportscan::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "Assignment-4_autogen::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "Assignment-4_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "Assignment-4_autogen::@6890427a1f51a3e7e1df"
+			"backtrace" : 71,
+			"id" : "Assignment-4_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Assignment-4::@6890427a1f51a3e7e1df",
