@@ -1,42 +1,103 @@
 import QtQuick 2.0
 import QtQuick.Controls
 
-GridView {
 
+Rectangle {
+    width: 600
+    height: 600
+    color: "lightgrey"
+    id: root
 
-    model: GiphyModel { id: mainModel }
-    delegate: Rectangle {
-        width: 150
-        height: 200
-        color: "lightblue"
+    Component.onCompleted: {
+        console.log("Custom Grid View Component completed")
+    }
 
-        Rectangle {
-            anchors.fill: parent
-            anchors.margins: 5
-            radius: 10
+    GridView {
+        anchors.fill: parent
+        model: listViewLoader.myModel
+        cellWidth: 150
+        cellHeight: 200
 
-            Image {
-                id: thumnailImage
-                width: parent.width
-                height: 150
-                source: url
-            }
+        delegate: Rectangle {
+            width: 150
+            height: 200
+            color: "transparent"
 
             Rectangle {
-                anchors.top: thumnailImage.bottom
-                anchors.bottom: parent.bottom
-                anchors.left: parent.left
-                anchors.right: parent.right
+                anchors.fill: parent
+                anchors.margins: 5
+                radius: 10
+                clip: true
 
-                Text {
-                    id: thumbnailText
-                    anchors.centerIn: parent
+                Image {
+                    id: thumnailImage
+                    width: parent.width
+                    height: 150
+                    source: url
+                }
 
-                    text: name
+                Rectangle {
+                    anchors.top: thumnailImage.bottom
+                    anchors.bottom: parent.bottom
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    width: 135
+                    clip: true
+
+                    Text {
+                        id: thumbnailText
+                        width: 130
+                        wrapMode: Text.Wrap
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+
+                        text: name
+                    }
                 }
             }
-
-
         }
     }
+
+//    GridView {
+//        Component.onCompleted: {
+//            console.log("Custom Grid View Component completed 2nd", gridViewLoader.mymodel.count)
+//        }
+
+//        anchors.fill: parent
+//        model: gridViewLoader.myModel
+//        delegate: Rectangle {
+//            width: 150
+//            height: 200
+//            color: "lightblue"
+
+//            Rectangle {
+//                anchors.fill: parent
+//                anchors.margins: 5
+//                radius: 10
+
+//                Image {
+//                    id: thumnailImage
+//                    width: parent.width
+//                    height: 150
+//                    source: url
+//                }
+
+//                Rectangle {
+//                    anchors.top: thumnailImage.bottom
+//                    anchors.bottom: parent.bottom
+//                    anchors.left: parent.left
+//                    anchors.right: parent.right
+
+//                    Text {
+//                        id: thumbnailText
+//                        anchors.centerIn: parent
+
+//                        text: name
+//                    }
+//                }
+
+
+//            }
+//        }
+//    }
 }
