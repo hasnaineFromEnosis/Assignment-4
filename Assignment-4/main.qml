@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls
 import QtQuick.Window 2.15
 
+
 Window {
     id: root
     width: 640
@@ -10,29 +11,53 @@ Window {
     title: qsTr("Trending Gif")
     property GiphyModel mainModel: GiphyModel
 
-    FetchData {
-        onFetched: (model) => {
-            root.mainModel = model;
-            console.log("Model loaded")
-            listViewLoader.active = true
+    Rectangle {
+        id: mainRectangle
+        anchors.fill: parent
+
+        Rectangle {
+            id: topRectangle
+            width: parent.width
+            height: 50
+            color: "green"
+
+        }
+
+        Rectangle {
+            id: bottomRectangle
+            width: parent.width
+            anchors.top: topRectangle.bottom
+            anchors.bottom: mainRectangle.bottom
+            anchors.left: mainRectangle.left
+            anchors.right: mainRectangle.right
+
+            color: "red"
         }
     }
 
-    Loader {
-        id: gridViewLoader
-        source: "CustomGridView.qml"
-        anchors.fill: parent
-        active: false
+//    FetchData {
+//        onFetched: (model) => {
+//            root.mainModel = model;
+//            console.log("Model loaded")
+//            listViewLoader.active = true
+//        }
+//    }
 
-        property ListModel myModel: root.mainModel
-    }
+//    Loader {
+//        id: gridViewLoader
+//        source: "CustomGridView.qml"
+//        anchors.fill: parent
+//        active: false
 
-    Loader {
-        id: listViewLoader
-        source: "CustomListView.qml"
-        anchors.fill: parent
-        active: false
+//        property ListModel myModel: root.mainModel
+//    }
 
-        property ListModel myModel: root.mainModel
-    }
+//    Loader {
+//        id: listViewLoader
+//        source: "CustomListView.qml"
+//        anchors.fill: parent
+//        active: false
+
+//        property ListModel myModel: root.mainModel
+//    }
 }
