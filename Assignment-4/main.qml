@@ -31,10 +31,12 @@ Window {
                     console.log("Clicked & state: ", position)
 
                     if(checked) {
-
+                        gridViewLoader.active = true
+                        listViewLoader.active = false
                     }
                     else {
-
+                        gridViewLoader.active = false
+                        listViewLoader.active = true
                     }
 
                 }

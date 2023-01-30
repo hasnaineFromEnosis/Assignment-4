@@ -5,7 +5,7 @@ import QtQuick.Controls
 Rectangle {
     width: 600
     height: 600
-    color: "lightgrey"
+    color: "transparent"
     id: root
 
     Component.onCompleted: {
@@ -13,6 +13,7 @@ Rectangle {
     }
 
     GridView {
+        anchors.centerIn: parent
         anchors.fill: parent
         model: listViewLoader.myModel
         cellWidth: 150
@@ -28,12 +29,14 @@ Rectangle {
                 anchors.margins: 5
                 radius: 10
                 clip: true
+                color: "#8395a7"
 
-                Image {
+                CustomImage {
                     id: thumnailImage
                     width: parent.width
                     height: 150
-                    source: url
+                    imgsrc: url
+                    bgcolor: "#8395a7"
                 }
 
                 Rectangle {
@@ -43,6 +46,7 @@ Rectangle {
                     anchors.right: parent.right
                     width: 135
                     clip: true
+                    color: "transparent"
 
                     Text {
                         id: thumbnailText
