@@ -23,31 +23,38 @@ Window {
             height: 50
             color: "#222f3e"
 
-            Switch {
-                id: switchButton
+            Rectangle {
                 anchors.centerIn: parent
+                color: "transparent"
+                width: 180
+                height: 30
+                clip: true
 
-                onClicked: {
-                    console.log("Clicked & state: ", position)
+                Switch {
+                    id: switchButton
 
-                    if(checked) {
-                        gridViewLoader.active = true
-                        listViewLoader.active = false
+                    onClicked: {
+                        console.log("Clicked & state: ", position)
+
+                        if(checked) {
+                            gridViewLoader.active = true
+                            listViewLoader.active = false
+                        }
+                        else {
+                            gridViewLoader.active = false
+                            listViewLoader.active = true
+                        }
+
                     }
-                    else {
-                        gridViewLoader.active = false
-                        listViewLoader.active = true
-                    }
-
                 }
-            }
 
-            Text {
-                id: switchButtonText
-                color: "#c8d6e5"
-                text: switchButton.checked ?  "Currently in Grid View" : "Currently in List View"
-                anchors.left: switchButton.right
-                y: switchButton.y + 5
+                Text {
+                    id: switchButtonText
+                    color: "#c8d6e5"
+                    text: switchButton.checked ?  "Currently in Grid View" : "Currently in List View"
+                    anchors.left: switchButton.right
+                    y: switchButton.y + 5
+                }
             }
 
         }
