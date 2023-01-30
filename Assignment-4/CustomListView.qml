@@ -8,6 +8,7 @@ Rectangle {
         anchors.fill: parent
         model: listViewLoader.myModel
         spacing: 20
+        contentX: (350 / 2) - root.width / 2
 
         delegate: Rectangle {
             id: topRect
