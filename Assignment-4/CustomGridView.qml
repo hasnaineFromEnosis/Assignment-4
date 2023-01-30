@@ -3,8 +3,6 @@ import QtQuick.Controls
 
 
 Rectangle {
-    width: 600
-    height: 600
     color: "transparent"
     id: root
 
@@ -34,7 +32,7 @@ Rectangle {
                 CustomImage {
                     id: thumnailImage
                     width: parent.width
-                    height: 150
+                    height: 135
                     imgsrc: url
                     bgcolor: "#8395a7"
                 }

@@ -64,31 +64,38 @@ Window {
             clip: true
             color: "transparent"
 
-                FetchData {
-                    onFetched: (model) => {
-                        root.mainModel = model;
-                        console.log("Model loaded")
-                        listViewLoader.active = true
-                    }
-                }
+            FetchData {
+                onFetched: (model) => {
+                               root.mainModel = model;
+                               console.log("Model loaded")
+                               if(switchButton.checked) {
+                                   gridViewLoader.active = true
+                                   listViewLoader.active = false
+                               }
+                               else {
+                                   gridViewLoader.active = false
+                                   listViewLoader.active = true
+                               }
+                           }
+            }
 
-                Loader {
-                    id: gridViewLoader
-                    source: "CustomGridView.qml"
-                    anchors.fill: parent
-                    active: false
+            Loader {
+                id: gridViewLoader
+                source: "CustomGridView.qml"
+                anchors.fill: parent
+                active: false
 
-                    property ListModel myModel: root.mainModel
-                }
+                property ListModel myModel: root.mainModel
+            }
 
-                Loader {
-                    id: listViewLoader
-                    source: "CustomListView.qml"
-                    anchors.fill: parent
-                    active: false
+            Loader {
+                id: listViewLoader
+                source: "CustomListView.qml"
+                anchors.fill: parent
+                active: false
 
-                    property ListModel myModel: root.mainModel
-                }
+                property ListModel myModel: root.mainModel
+            }
         }
     }
 
