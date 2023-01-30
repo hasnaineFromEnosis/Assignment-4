@@ -19,7 +19,32 @@ Window {
             id: topRectangle
             width: parent.width
             height: 50
-            color: "green"
+            color: "#222f3e"
+
+            Switch {
+                id: switchButton
+                anchors.centerIn: parent
+
+                onClicked: {
+                    console.log("Clicked & state: ", position)
+
+                    if(checked) {
+
+                    }
+                    else {
+
+                    }
+
+                }
+            }
+
+            Text {
+                id: switchButtonText
+                color: "#c8d6e5"
+                text: switchButton.checked ?  "Currently in Grid View" : "Currently in List View"
+                anchors.left: switchButton.right
+                y: switchButton.y + 5
+            }
 
         }
 
@@ -31,7 +56,7 @@ Window {
             anchors.left: mainRectangle.left
             anchors.right: mainRectangle.right
 
-            color: "red"
+            color: "#576574"
         }
     }
 
