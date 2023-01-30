@@ -14,7 +14,7 @@ Window {
         onFetched: (model) => {
             root.mainModel = model;
             console.log("Model loaded")
-            gridViewLoader.active = true
+            listViewLoader.active = true
         }
     }
 
