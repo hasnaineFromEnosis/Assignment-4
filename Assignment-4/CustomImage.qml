@@ -56,6 +56,25 @@ The round_corner function calculates the opacity of each pixel in the image base
 
 
 
+//Rectangle {
+//    id: root
+//    property string imgsrc: "value"
+//    property string bgcolor: "value"
+//    property int cornerRadius: 20
+//    clip: true
+//    BorderImage {
+//        anchors.fill: parent
+//        border {
+//            left: root.cornerRadius;
+//            top: root.cornerRadius;
+//            right: root.cornerRadius;
+//            bottom: root.cornerRadius
+//        }
+//        horizontalTileMode: BorderImage.Stretch
+//        verticalTileMode: BorderImage.Stretch
+//        source: root.imgsrc
+//    }
+//}
 
 Item {
     id: root
