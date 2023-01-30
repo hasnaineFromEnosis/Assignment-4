@@ -6,10 +6,6 @@ Rectangle {
     color: "transparent"
     id: root
 
-    Component.onCompleted: {
-        console.log("Custom Grid View Component completed")
-    }
-
     GridView {
         anchors.centerIn: parent
         anchors.fill: parent
@@ -59,47 +55,4 @@ Rectangle {
             }
         }
     }
-
-//    GridView {
-//        Component.onCompleted: {
-//            console.log("Custom Grid View Component completed 2nd", gridViewLoader.mymodel.count)
-//        }
-
-//        anchors.fill: parent
-//        model: gridViewLoader.myModel
-//        delegate: Rectangle {
-//            width: 150
-//            height: 200
-//            color: "lightblue"
-
-//            Rectangle {
-//                anchors.fill: parent
-//                anchors.margins: 5
-//                radius: 10
-
-//                Image {
-//                    id: thumnailImage
-//                    width: parent.width
-//                    height: 150
-//                    source: url
-//                }
-
-//                Rectangle {
-//                    anchors.top: thumnailImage.bottom
-//                    anchors.bottom: parent.bottom
-//                    anchors.left: parent.left
-//                    anchors.right: parent.right
-
-//                    Text {
-//                        id: thumbnailText
-//                        anchors.centerIn: parent
-
-//                        text: name
-//                    }
-//                }
-
-
-//            }
-//        }
-//    }
 }

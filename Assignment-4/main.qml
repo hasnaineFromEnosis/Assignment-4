@@ -9,7 +9,7 @@ Window {
     height: 480
     visible: true
     title: qsTr("Trending Gif")
-    property GiphyModel mainModel: GiphyModel
+    property GiphyModel mainModel: GiphyModel {}
 
     Rectangle {
         id: mainRectangle
@@ -69,8 +69,8 @@ Window {
                                root.mainModel = model;
                                console.log("Model loaded")
                                if(switchButton.checked) {
-                                   gridViewLoader.active = true
                                    listViewLoader.active = false
+                                   gridViewLoader.active = true
                                }
                                else {
                                    gridViewLoader.active = false
