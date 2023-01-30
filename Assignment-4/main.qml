@@ -15,6 +15,8 @@ Window {
         id: mainRectangle
         anchors.fill: parent
 
+        color: "#576574"
+
         Rectangle {
             id: topRectangle
             width: parent.width
@@ -55,34 +57,38 @@ Window {
             anchors.bottom: mainRectangle.bottom
             anchors.left: mainRectangle.left
             anchors.right: mainRectangle.right
+            anchors.margins: 30
 
-            color: "#576574"
+            clip: true
+            color: "transparent"
+
+                FetchData {
+                    onFetched: (model) => {
+                        root.mainModel = model;
+                        console.log("Model loaded")
+                        listViewLoader.active = true
+                    }
+                }
+
+                Loader {
+                    id: gridViewLoader
+                    source: "CustomGridView.qml"
+                    anchors.fill: parent
+                    active: false
+
+                    property ListModel myModel: root.mainModel
+                }
+
+                Loader {
+                    id: listViewLoader
+                    source: "CustomListView.qml"
+                    anchors.fill: parent
+                    active: false
+
+                    property ListModel myModel: root.mainModel
+                }
         }
     }
 
-//    FetchData {
-//        onFetched: (model) => {
-//            root.mainModel = model;
-//            console.log("Model loaded")
-//            listViewLoader.active = true
-//        }
-//    }
 
-//    Loader {
-//        id: gridViewLoader
-//        source: "CustomGridView.qml"
-//        anchors.fill: parent
-//        active: false
-
-//        property ListModel myModel: root.mainModel
-//    }
-
-//    Loader {
-//        id: listViewLoader
-//        source: "CustomListView.qml"
-//        anchors.fill: parent
-//        active: false
-
-//        property ListModel myModel: root.mainModel
-//    }
 }

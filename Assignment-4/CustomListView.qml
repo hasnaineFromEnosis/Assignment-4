@@ -15,14 +15,15 @@ Rectangle {
         delegate: Rectangle {
             width: 350
             height: 150
-            color: "transparent"
-            border.color: "red"
+            color: "#8395a7"
+            radius: 20
 
             Rectangle {
                 anchors.fill: parent
                 anchors.margins: 5
-                radius: 10
+                radius: 20
                 clip: true
+                color: "transparent"
 
                 Image {
                     id: thumnailImage
@@ -38,6 +39,7 @@ Rectangle {
                     anchors.right: parent.right
                     anchors.margins: 20
                     clip: true
+                    color: "transparent"
 
                     Text {
                         id: thumbnailText
