@@ -1,9 +1,0 @@
--rootPath
-C:/Users/hasnaine/Documents/QT Practice/Assignment-4/Assignment-4
--cmake-output
--output-file
-C:/Users/hasnaine/Documents/QT Practice/Assignment-4/build-Assignment-4-Desktop_Qt_6_4_2_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_Assignment-4.cmake
--importPath
-C:/Users/hasnaine/Documents/QT Practice/Assignment-4/build-Assignment-4-Desktop_Qt_6_4_2_MinGW_64_bit-Debug
--importPath
-C:/Qt/6.4.2/mingw_64/./qml
